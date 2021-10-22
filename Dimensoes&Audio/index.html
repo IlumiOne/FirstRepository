@@ -5,19 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimensoes&Audio</title>
+    <style>
+        div{text-align: center;}
+    </style>
 </head>
 <body>
-    <picture>
-        <source media="(max-width:750px )" srcset="foto-p.png" type="image/png">
-        <!--Tela com tamanho pequeno-->
-        <source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png">
-        <!-- Tela com tamanho médio-->
-        <img src="foto-g.png" alt="Imagem Grande">
-        <!--Imagem Original-Tela Grande-->
+    <div>
+        <p>
+            <audio preload="metadata" controls autoplay loop>
+                <source src="Kanye West - 24 (Alternative) Snippet (320 kbps).mp3" type="audio/mpeg">
+            </audio>
+        </p>
+        <p>
+            <picture>
+                <source media="(max-width:750px )" srcset="foto-p.png" type="image/png">
+                <!--Tela com tamanho pequeno-->
+                <source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png">
+                <!-- Tela com tamanho médio-->
+                <img src="foto-g.png" alt="Imagem Grande">
+                <!--Imagem Original-Tela Grande-->
+        
+                <!--
+                    Os tamanhos devem ser escritos do menor para o maior no codigo, assim como o supracitado.
+                -->
+            </picture>
+        </p>
+        <p>
+            <a href="./24zip.rar" download="Kanye West - 24 (Alternative) Snippet (320 kbps).mp3">Faca o download do áudio compactado</a>
+        </p>
+        <p>
+            <br>
+            <!--Incorporando codigos HTML do YOUTUBE-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MSWS-9eFfvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+    </div>
 
-        <!--
-            Os tamanhos devem ser escritos do menor para o maior no codigo, assim como o supracitado.
-        -->
-    </picture>
+
 </body>
 </html>
