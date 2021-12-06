@@ -10,7 +10,9 @@
     </style>
     <title>Titulos</title>
 </head>
-<body>
+<body onload="novaData()">
+    <!--onload = aciona funcao assim que a pagina é carregada -->
+    <!--onload = Deve ser colocada no escopo do <body> -->
     <h1>Pai é indiciado após filho de 2 anos matar mãe a tiros durante chamada de Zoom</h1>
     <hr>
     <h2>Polícia disse que arma foi mantida carregada em mochila infantil no chão do quarto do casal.</h2>
@@ -36,15 +38,30 @@
     <p>Nenhum dos dois filhos do casal, que estavam em casa durante o incidente, ficou ferido. Ambos agora estão sob os cuidados de outros membros da família.</p>
     <p>Avery deve comparecer a uma nova audiência no tribunal em 23 de novembro.</p>
     <hr>
-    <p><small>por <abbr title="British Briadcasting Corporation">BBC</abbr>&nbsp;<sup>15/10/2021</sup></p></small> 
-
+    <p>
+        <small>
+            por <abbr title="British Briadcasting Corporation">BBC</abbr>&nbsp;<sup id="sup"></sup></p>
+        </small> 
     <p>
         <small><a href="./materia.pdf" download="./materia.pdf" style="color: black;" >Baixe a matéria</a> ou</small>
         <!--O google abre uma nova guia onde pode ser baixado o pdf ou audio, porem com outros types de download o arquivo,zip ou aplicattion, é baixado normalmente, somente com o clique-->
         <small><a href="https://g1.globo.com/mundo/noticia/2021/10/15/pai-e-indiciado-apos-filho-de-2-anos-matar-mae-a-tiros-durante-chamada-de-zoom.ghtml" target="_blank" style="color: red; text-decoration-line: none;"> acesse no site</a></small>
     </p>
-    
- <!--small: letras miudas-->
- <!--big(obsoleto em HTML5; sem semantica)-->
+    <script>
+        function novaData(){
+            /*Se liga na dificuldade pra colocar uma data decente(mm/dd/aaaa) !!! 😣😣*/
+            /*data real*/
+            var obData = new Date();
+            var d    = String(obData.getDate()).padStart(2,'0');
+            /*padStart() = caracter a esquerda,no caso, um zero a esquerda*/
+            var m    = String(obData.getMonth() +1 /*em JS os meses sao cont. de 0-11*/).padStart(2,'0');
+            var a    = String(obData.getFullYear());
+            
+            let saida = document.getElementById('sup');
+            saida.innerHTML = (d+`/`+m+`/`+a);
+        }
+        </script>
+        <!--small: letras miudas-->
+        <!--big(obsoleto em HTML5; sem semantica)-->
 </body>
 </html>
