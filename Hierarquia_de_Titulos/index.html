@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         p{width: 800px;}
-       
     </style>
     <title>Titulos</title>
 </head>
-<body onload="novaData()">
+<body onload="novaData();sorteioDia();sorteioMes();" >
     <!--onload = aciona funcao assim que a pagina é carregada -->
     <!--onload = Deve ser colocada no escopo do <body> -->
     <h1>Pai é indiciado após filho de 2 anos matar mãe a tiros durante chamada de Zoom</h1>
@@ -28,7 +27,7 @@
     <p>Na Flórida, homicídio culposo é crime punível com até 15 anos de prisão.Avery também pode enfrentar 15 anos de liberdade condicional e uma multa de US$ 10 mil(cerca de R$ 55 mil).</p>
     <h3>A arma foi mantida desprotegida dentro de uma mochila infantil que foi deixada no chão do quarto do casal,segundo a polícia de Altmonte Springs.</h3>
     <p>Os policiais disseram que a criança pegou a arma,foi para trás da mãe e disparou um único tiro.</p>
-    <p>Uma das colegas de trabalho de Lynn que participava da videochamada no aplicativo Zoom telefonou em 11 de agosto para equipes de emergência. Ela relatou ter ouvido um barulho alto e visto Lynn cair para trás.</p>
+    <p>Uma das colegas de trabalho de Lynn que participava da videochamada no aplicativo Zoom telefonou em <span id='saidaDia2'></span> de agosto para equipes de emergência. Ela relatou ter ouvido um barulho alto e visto Lynn cair para trás.</p>
     <blockquote>"Uma das meninas desmaiou... Ela está com a câmera ligada. Seu bebê está chorando ao fundo", <cite>disse a colegade trabalho em uma ligação divulgada pela polícia à imprensa local.</cite></blockquote>
     <blockquote><p>Quando Avery voltou para casa, encontrou sua namorada sangrando no chão. Ele chamou a polícia e pediu aos paramédicos "por favor, se apressem",<cite> segundo o jornal Orlando Sentinel.</cite> </p></blockquote>
     <p>Durante o telefonema, ele disse que tinha acabado de voltar para casa e não sabia o que havia acontecido. Ele podia ser ouvido realizando reanimação cardiorrespiratória enquanto esperava a ajuda chegar.</p>
@@ -36,7 +35,7 @@
     <blockquote>"Decisões geram consequências",<cite>o policial de Altamonte Springs, Roberto Ruiz, em entrevista a jornalistas na terça-feira (12).</cite> "Como proprietário de uma arma, você tem a responsabilidade de cuidar dessas armas."</blockquote>
     
     <p>Nenhum dos dois filhos do casal, que estavam em casa durante o incidente, ficou ferido. Ambos agora estão sob os cuidados de outros membros da família.</p>
-    <p>Avery deve comparecer a uma nova audiência no tribunal em 23 de novembro.</p>
+    <p>Avery deve comparecer a uma nova audiência no tribunal em <span id='saidaDia'></span> de <span id='saidaMes'></span>.</p>
     <hr>
     <p>
         <small>
@@ -47,21 +46,9 @@
         <!--O google abre uma nova guia onde pode ser baixado o pdf ou audio, porem com outros types de download o arquivo,zip ou aplicattion, é baixado normalmente, somente com o clique-->
         <small><a href="https://g1.globo.com/mundo/noticia/2021/10/15/pai-e-indiciado-apos-filho-de-2-anos-matar-mae-a-tiros-durante-chamada-de-zoom.ghtml" target="_blank" style="color: red; text-decoration-line: none;"> acesse no site</a></small>
     </p>
-    <script>
-        function novaData(){
-            /*Se liga na dificuldade pra colocar uma data decente(mm/dd/aaaa) !!! 😣😣*/
-            /*data real*/
-            var obData = new Date();
-            var d    = String(obData.getDate()).padStart(2,'0');
-            /*padStart() = caracter a esquerda,no caso, um zero a esquerda*/
-            var m    = String(obData.getMonth() +1 /*em JS os meses sao cont. de 0-11*/).padStart(2,'0');
-            var a    = String(obData.getFullYear());
-            
-            let saida = document.getElementById('sup');
-            saida.innerHTML = (d+`/`+m+`/`+a);
-        }
-        </script>
         <!--small: letras miudas-->
         <!--big(obsoleto em HTML5; sem semantica)-->
+
+    <script src="fun.js"></script>
 </body>
 </html>
